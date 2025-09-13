@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
   --background: #ffffff;
@@ -23,4 +23,75 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  @apply bg-gray-900 text-white;
+}
+
+/* Custom scrollbar for better look in dark mode */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #1f2937; /* gray-800 */
+}
+::-webkit-scrollbar-thumb {
+  background: #4b5563; /* gray-600 */
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6b7280; /* gray-500 */
+}
+
+.resizer {
+  @apply hidden lg:flex items-center justify-center w-[10px] cursor-col-resize;
+  @apply bg-white;
+  @apply dark:bg-slate-900;
+  flex-shrink: 0;
+}
+
+.resizer-handle {
+  @apply w-[4px] h-10 bg-gray-600 rounded-full;
+}
+
+.no-select {
+  user-select: none;
+}
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-toast {
+  animation: fade-in-up 0.3s ease-out;
+}
+
+@keyframes pulse-light {
+  0%,
+  100% {
+    background-color: theme('colors.white');
+  }
+  50% {
+    background-color: theme('colors.yellow.100');
+  }
+}
+@keyframes pulse-dark {
+  0%,
+  100% {
+    background-color: theme('colors.blue.600');
+  }
+  50% {
+    background-color: theme('colors.blue.500');
+  }
+}
+.active-pulse-light {
+  animation: pulse-light 1.5s ease-in-out;
+}
+.active-pulse-dark {
+  animation: pulse-dark 1.5s ease-in-out;
 }
