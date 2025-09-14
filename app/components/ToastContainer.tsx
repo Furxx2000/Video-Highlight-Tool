@@ -18,7 +18,10 @@ export const ToastContainer = () => {
   }, []);
 
   return (
-    <div className='fixed bottom-5 left-1/2 -translate-x-1/2 z-50'>
+    <div
+      className='fixed bottom-5 left-1/2 -translate-x-1/2 z-50 
+                 w-[90%] sm:w-full sm:max-w-xs'
+    >
       {toasts.map((toast) => (
         <Toast
           key={toast.id}
