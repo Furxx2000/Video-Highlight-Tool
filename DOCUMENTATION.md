@@ -8,14 +8,14 @@
 
 ## 2. 核心技術棧 (Core Technologies)
 
-### 2.1 Next.js 14 (App Router)
+### 2.1 Next.js 15 (App Router)
 
 - **選擇原因：**
   - **混合渲染模型：** App Router 提供的伺服器元件 (RSC) 和客戶端元件 (Client Components) 模型，讓我們能做出更優的架構決策。專案最初利用 RSC 進行快速的初始資料獲取和頁面骨架渲染，而後續所有複雜的互動邏輯則被清晰地封裝在 Client Components 中。
   - **性能優勢：** 利用 SSR 和 Streaming，結合 `loading.tsx` (`Suspense`)，我們為使用者提供了即時的載入反饋（骨架屏），避免了白屏等待，極大地提升了初始載入體驗。
   - **開發體驗：** 基於檔案的路由、優化的圖片處理和內建的工具鏈，顯著提高了開發效率。
 
-### 2.2 React 18 & TypeScript
+### 2.2 React 19 & TypeScript
 
 - **選擇原因：**
   - **React：** 其元件化的開發模式是構建複雜 UI 的行業標準。我們充分利用了 Hooks (`useState`, `useEffect`, `useCallback`, `useMemo`) 來管理元件狀態和生命週期。
