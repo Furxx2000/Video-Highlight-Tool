@@ -26,6 +26,8 @@ const VideoPlayer = forwardRef<HTMLVideoElement, VideoPlayerProps>(
         className='w-full h-full rounded-lg'
         onLoadedMetadata={onLoadedMetadata}
         onTimeUpdate={onTimeUpdate}
+        playsInline
+        webkit-playsinline='true'
       />
     );
   }
