@@ -310,8 +310,8 @@ export default function HighlightTool() {
   if (appState === 'processing') return <ProcessingScreen />;
 
   return (
-    <TranscriptContext.Provider value={transcriptContextValue}>
-      <PlayerContext.Provider value={playerContextValue}>
+    <TranscriptContext value={transcriptContextValue}>
+      <PlayerContext value={playerContextValue}>
         <div className='flex flex-col h-screen bg-gray-900'>
           <Header onReset={handleReset} />
           <Workspace
@@ -319,7 +319,7 @@ export default function HighlightTool() {
             preview={<PreviewPanel videoUrl={videoUrl} />}
           />
         </div>
-      </PlayerContext.Provider>
-    </TranscriptContext.Provider>
+      </PlayerContext>
+    </TranscriptContext>
   );
 }
