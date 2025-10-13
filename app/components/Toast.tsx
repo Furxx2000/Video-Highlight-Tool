@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react';
 import { CloseIcon, ErrorIcon, SuccessIcon } from './Icons';
-import { TOAST_DURATION } from '../lib/constans';
+import { TOAST_DURATION } from '../lib/constants';
 
 export interface ToastProps {
   id: string;

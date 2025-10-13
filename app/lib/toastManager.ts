@@ -1,4 +1,4 @@
-import { TOAST_DURATION } from './constans';
+import { TOAST_DURATION } from './constants';
 
 export interface ToastMessage {
   id: string;

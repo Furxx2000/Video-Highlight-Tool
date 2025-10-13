@@ -16,7 +16,7 @@ import UploadScreen from './UploadScreen';
 import ProcessingScreen from './ProcessingScreen';
 import Header from './Header';
 import Workspace from './Workspace';
-import { INITIAL_SELECTED_IDS } from '../lib/constans';
+import { INITIAL_SELECTED_IDS } from '../lib/constants';
 
 type AppState = 'waitingForUpload' | 'processing' | 'ready';
 

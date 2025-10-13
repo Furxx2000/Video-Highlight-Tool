@@ -7,7 +7,7 @@ import {
   INITIAL_PANEL_WIDTH,
   RESIZER_MIN_WIDTH,
   RESIZER_MAX_WIDTH,
-} from '../lib/constans';
+} from '../lib/constants';
 
 interface WorkspaceProps {
   editor: React.ReactNode;
